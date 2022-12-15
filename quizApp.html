@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Taker</title>
+    <style>
+
+        body{
+            background-color: grey;
+        }
+
+
+        /* BODY STYLING */
+        #testPage{
+            border: 2px solid black;
+            width: 100%;
+            height: fit-content;
+            
+            margin-right: 25%;
+            margin-left: 25%;
+            display: flex;
+            width: 800px;
+            height: 400px;
+            background-color: rgb(83, 123, 224);
+            
+        }
+          .CHECKED{
+            background-color: rgb(107, 102, 102);
+            width: fit-content;
+            height: fit-content;
+
+          }
+        #legend{
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 1px 1px grey;
+           
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(43, 0, 255);
+        }
+
+        .quest{
+            
+        }
+       
+
+        #funcs{
+            border: 1px solid black;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 10px;
+            margin-left: 45%;
+            margin-right: 45%;
+        }
+
+
+        div{
+            margin-top: 10%;
+            margin-right: 10px;
+        }
+
+        .qs{
+            border: 1px solid black;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        #Submit{
+            display: none;
+        }
+
+        #urScore{
+            text-align: center;
+            background-color: black;
+            width: fit-content;
+            color: white;
+            margin-left: 45%;
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- MAIN QUIZ FORM -->
+    <form id="testPage">
+
+        <legend id="legend">Press <i><b>Next</b></i> To Start</legend>
+
+        <h2 id="qTs">The Question Will Pop Up Here</h2> 
+
+        <div id="question1" class="" name="quest" onclick="addanswer(this)"><p id=q1 class="qs"></p></div>
+        
+        <div id="question2" class="" name="quest" onclick="addanswer(this)"><p id=q2 class="qs" ></p></div>
+        
+        <div id="question3" class="" name="quest" onclick="addanswer(this)"><p id=q3 class="qs"></p></div>
+        
+        <div id="question4" class="" name="quest" onclick="addanswer(this)"><p id=q4 class="qs"></p></div>
+
+        
+    </form>
+
+
+    <h1 id="urScore"></h1>
+
+
+    <!-- FUNCTION BUTTON -->
+    <div id="funcs">
+    
+    <button type="button" id="Previous" class="function" onclick="prev()">Previous '?'</button>
+    <button type="button" id="Next" class="function" onclick="next()">Next '?'</button>
+    <button type="button" id="Submit" class="function" onclick="submit()" >Submit Answer</button>
+    </div>
+    <script src="/quizApp.js" defer></script>
+</body>
+</html>
